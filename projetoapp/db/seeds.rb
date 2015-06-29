@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'Jorge Rodrigues', :email => 'jrgvf@cin.ufpe.br', :password => '123456', :password_confirmation => '123456'
+user = User.create! :name => 'Jorge Rodrigues', :email => 'jrgvf@cin.ufpe.br', :password => '123456', :password_confirmation => '123456', :user_id => 1
 puts 'New user created: ' << user.name
 user2 = User.create! :name => 'Juliana Carvalho', :email => 'jco2@cin.ufpe.br', :password => '123456', :password_confirmation => '123456'
 puts 'New user created: ' << user2.name
+
+#projetos = Projeto.create! :content => 'cvknklfdnvv', :title => 'csvfdvf', :endereco => 'fvmkmvkmmv', :telefone => '1232323', :user_id => 1

@@ -1,0 +1,41 @@
+<%= form_for(@projeto) do |f| %>
+  <% if @projeto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@projeto.errors.count, "error") %> prohibited this projeto from being saved:</h2>
+
+      <ul>
+      <% @projeto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :titulo, class: 'control-label' %><br>
+    <div class="controls">
+      <%= f.text_field :titulo, class: 'input-xlarge', placeholder: "Digite o nome do projeto", autofocus: true %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao, class: 'input-xlarge' %>
+  </div>
+  <div class="field">
+    <%= f.label :responsavel %><br>
+    <%= f.text_field :responsavel, class: 'input-xlarge', placeholder: "Digite o nome do coordenador" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: 'input-xlarge', placeholder: "Digite aqui o seu email" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone, class: 'input-xlarge', placeholder: "(xx) xxxx-xxxx" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

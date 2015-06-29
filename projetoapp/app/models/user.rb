@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   include ValidateEmailHelper
   
+  has_many :cadastros
+  has_many :projetos, through: :cadastros
+  
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

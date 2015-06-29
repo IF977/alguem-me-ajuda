@@ -1,5 +1,5 @@
 <% provide(:title, 'Confirmação de Usuário') %>
-<h2>Resend confirmation instructions</h2>
+<h2>Reenviar instrução de confirmação</h2>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Reenviar instrução de confirmação" %>
   </div>
 <% end %>
 

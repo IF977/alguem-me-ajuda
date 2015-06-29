@@ -1,0 +1,32 @@
+<h1>Lista de Projetos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descrição</th>
+      <th>Responsável</th>
+      <th>E-mail</th>
+      <th>Telefone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= projeto.titulo %></td>
+        <td><%= projeto.descricao %></td>
+        <td><%= projeto.responsavel %></td>
+        <td><%= projeto.email %></td>
+        <td><%= projeto.telefone %></td>
+        <td><%= link_to 'Ver Projeto', projeto %></td>
+        <td><%= link_to 'Editar', edit_projeto_path(projeto) %></td>
+        <td><%= link_to 'Deletar', projeto, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<a href="/projetos/new", new_projeto_path class="btn btn-large btn-primary">Novo Projeto</a>

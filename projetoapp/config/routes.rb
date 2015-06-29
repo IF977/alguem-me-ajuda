@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :projetos
+  resources :usuarios
+  
   get 'home/index'
-
+  
   devise_for :users
   
   root 'home#index'
