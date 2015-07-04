@@ -3,9 +3,9 @@ class Projeto < ActiveRecord::Base
   has_many :cadastros
   has_many :users, through: :cadastros, source: :users
   
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :lockable, :timeoutable
+  #devise :database_authenticatable, :registerable,
+  #       :recoverable, :rememberable, :trackable, :validatable,
+  #       :confirmable, :lockable, :timeoutable
   
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
